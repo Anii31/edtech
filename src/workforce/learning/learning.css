@@ -1,0 +1,64 @@
+.learning-module {
+  padding: 20px;
+}
+
+.module-subtitle {
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.module-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.module-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.module-card:hover {
+  transform: translateY(-3px);
+}
+
+.module-info h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.module-meta {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.duration {
+  color: #7f8c8d;
+}
+
+.completed {
+  color: #2ecc71;
+  font-weight: 600;
+}
+
+.start-btn {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #2980b9;
+}

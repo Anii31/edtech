@@ -1,0 +1,468 @@
+/* Profile Container */
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.avatar-container {
+  position: relative;
+  width: 150px;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #4a6fa5;
+}
+
+.edit-avatar-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h1 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 2rem;
+}
+
+.email {
+  color: #7f8c8d;
+  margin: 0.5rem 0;
+}
+
+.bio {
+  margin: 1rem 0;
+  line-height: 1.5;
+  color: #555;
+}
+
+.member-since {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.profile-action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.edit-profile-btn, .logout-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+}
+
+.edit-profile-btn {
+  background: #4a6fa5;
+  color: white;
+}
+
+.logout-btn {
+  background: #f8f9fa;
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+}
+
+/* Edit Form Styles */
+.edit-input, .edit-textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.edit-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.save-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Profile Tabs */
+.profile-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #7f8c8d;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tab-btn.active {
+  color: #4a6fa5;
+}
+
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #4a6fa5;
+}
+
+/* Tab Content */
+.tab-content {
+  min-height: 400px;
+}
+
+/* Overview Tab */
+.stats-container h2, .skills-container h2, .recent-activity h2,
+.achievements-tab h2, .mentor-tab h2, .projects-tab h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 2rem;
+  color: #4a6fa5;
+}
+
+.stat-card p {
+  margin: 0.5rem 0 0;
+  color: #7f8c8d;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.skill-tag {
+  background: #e0e7ff;
+  color: #4a6fa5;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.add-skill-btn {
+  background: none;
+  border: 1px dashed #7f8c8d;
+  color: #7f8c8d;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.recent-activity {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.activity-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-time {
+  color: #7f8c8d;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+/* Achievements Tab */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.achievement-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.achievement-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+  margin: 0.5rem 0;
+  color: #2c3e50;
+}
+
+.achievement-card p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* Mentor Tab */
+.mentor-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .mentor-card {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.mentor-info h3 {
+  margin: 0 0 0.5rem;
+  color: #2c3e50;
+}
+
+.mentor-field {
+  color: #7f8c8d;
+  margin: 0 0 1rem;
+}
+
+.next-meeting {
+  color: #27ae60;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.schedule-btn {
+  background: #4a6fa5;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mentor-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.message-btn {
+  color: #4a6fa5;
+  border-color: #4a6fa5;
+}
+
+.resources-btn {
+  color: #27ae60;
+  border-color: #27ae60;
+}
+
+.feedback-btn {
+  color: #e67e22;
+  border-color: #e67e22;
+}
+
+.mentor-history {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.meeting-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.meeting-item:last-child {
+  border-bottom: none;
+}
+
+.meeting-date {
+  color: #7f8c8d;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+/* Projects Tab */
+.new-project-btn {
+  background: #4a6fa5;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem;
+  color: #2c3e50;
+}
+
+.project-status {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.project-status.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.project-status.in-progress {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-details-btn {
+  background: #4a6fa5;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profile-action-buttons {
+    justify-content: center;
+  }
+  
+  .mentor-card {
+    flex-direction: column;
+  }
+  
+  .mentor-actions {
+    margin-top: 1rem;
+  }
+}
